@@ -7,8 +7,7 @@ period in descending access count order. You must ignore requests that don’t m
 request to the specified resource. Your program should accept these parameters from the
 command line, so invocation of your program will be in the following form.
 
-# Command:
-[$] python task2.py <date> <duration> <resource>
+> python task2.py [date] [duration] [resource]
 
 To calculate the Access Time (in seconds) of the dates in your logs use the following conversion.
 
