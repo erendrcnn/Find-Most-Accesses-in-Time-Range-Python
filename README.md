@@ -8,7 +8,7 @@ request to the specified resource. Your program should accept these parameters f
 command line, so invocation of your program will be in the following form.
 
 # Command:
->> python task2.py <date> <duration> <resource>
+[$] python task2.py <date> <duration> <resource>
 
 To calculate the Access Time (in seconds) of the dates in your logs use the following conversion.
 
@@ -17,9 +17,13 @@ AccessTime =DD∗86400+MM∗2628288+(YY−1970)∗31536000+hh∗3600+mm∗60+ss
 
 # Example Input:
 5.78.198.52 - - [22/Jan/2019:03:56:32 +0330] "GET /games/hollow_knight HTTP/1.1" ...
+
 5.78.198.52 - - [22/Jan/2019:03:56:32 +0330] "GET /games/hollow_knight HTTP/1.1" ...
+
 2.177.12.140 - - [22/Jan/2019:03:57:32 +0330] "GET /image/shiba.jpg HTTP/1.1" ...
+
 2.177.12.140 - - [23/Jan/2019:03:56:31 +0330] "GET /games/hollow_knight HTTP/1.1" ...
+
 2.177.12.140 - - [23/Jan/2019:03:56:32 +0330] "GET /games/hollow_knight HTTP/1.1" ...
 
 # Console Command:
@@ -27,6 +31,7 @@ python task2.py 22/Jan/2019:03:56:32 86400 /games/hollow_knight
 
 # Example Output:
 5.78.198.52 2 1549807280→AccessTime(22/Jan/2019:03:56:32)
+
 2.177.12.140 1 1549893679→AccessTime(23/Jan/2019:03:56:31)
 
 Notice that last request of 2.177.12.140 is excluded from our list, as:
